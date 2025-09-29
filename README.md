@@ -1,4 +1,4 @@
 ## Build Command
 mkdir build && cd build<br />
-cmake .. 
+cmake .. <br />
 make
