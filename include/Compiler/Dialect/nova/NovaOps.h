@@ -4,8 +4,11 @@
 #include "mlir/IR/BuiltinTypes.h"
 #include "mlir/IR/Dialect.h"
 #include "mlir/IR/OpDefinition.h"
+<<<<<<< HEAD
 #include "mlir/Interfaces/InferTypeOpInterface.h"
 #include "mlir/Interfaces/SideEffectInterfaces.h"
+=======
+>>>>>>> 08c39335bccfc6f99a9b5e6b29485ac525e18e91
 
 #include "Compiler/Dialect/nova/NovaDialect.h"
 
