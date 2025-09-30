@@ -15,5 +15,6 @@ add_mlir_dialect_library(MLIRNova
 
 target_include_directories(MLIRNova PRIVATE
   # ${CMAKE_CURRENT_BINARY_DIR}
-  ${PROJECT_BINARY_DIR}/include
+  ${PROJECT_BINARY_DIR}/include/Compiler/Dialect/nova
+
 )
