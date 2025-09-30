@@ -19,6 +19,9 @@ include(AddLLVM)
 include(AddMLIR)
 include(HandleLLVMOptions)
 
+set(LLVM_DIR ~/Desktop/llvm-project/build/lib/cmake/llvm)
+set(MLIR_DIR ~/Desktop/llvm-project/build/lib/cmake/mlir)
+
 # Include directories
 include_directories(${LLVM_INCLUDE_DIRS})
 include_directories(${MLIR_INCLUDE_DIRS})
