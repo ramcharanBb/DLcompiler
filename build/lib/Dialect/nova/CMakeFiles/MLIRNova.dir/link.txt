@@ -1,2 +1,0 @@
-/usr/bin/ar Dqc libMLIRNova.a CMakeFiles/obj.MLIRNova.dir/NovaDialect.cpp.o CMakeFiles/obj.MLIRNova.dir/NovaOps.cpp.o
-/usr/bin/ranlib -D libMLIRNova.a
