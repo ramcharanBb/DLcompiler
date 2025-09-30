@@ -11,5 +11,3 @@ make </pre>
 ## Test Command
 <pre>./build/tools/nova-opt/nova-opt test.mlir</pre>
 
-
-hello
