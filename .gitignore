@@ -1,2 +1,47 @@
+# Build directories
 build/
+bin/
+lib/
+*.a
+*.so
+*.dylib
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# VS Code settings
 .vscode/
+
+# Generated files
+*.h.inc
+*.cpp.inc
+
+# Compiled Object files
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+
+# Debug files
+*.dSYM/
+*.pdb
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
+*.temp
