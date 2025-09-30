@@ -11,10 +11,11 @@ add_mlir_dialect_library(MLIRNova
 
   LINK_LIBS PUBLIC
   MLIRIR
+  MLIRInferTypeOpInterface
+  MLIRSideEffectInterfaces
 )
 
 target_include_directories(MLIRNova PRIVATE
   # ${CMAKE_CURRENT_BINARY_DIR}
-  ${PROJECT_BINARY_DIR}/include/Compiler/Dialect/nova
-
+  ${PROJECT_BINARY_DIR}/include
 )
