@@ -1,4 +1,4 @@
-#include "NovaOps.h"
+#include "Compiler/Dialect/nova/NovaOps.h"
 #include "mlir/IR/Builders.h"
 #include "mlir/IR/OpImplementation.h"
 
