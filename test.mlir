@@ -1,6 +1,6 @@
-
-// Test nova.matmul
-func.func @test_matmul(%a: tensor<2x3xf32>, %b: tensor<3x4xf32>) -> tensor<2x4xf32> {
-  %0 = nova.matmul %a, %b : tensor<2x4xf32>, tensor<3x4xf32>
-  return %0 : tensor<2x4xf32>
+//test file
+func.func @test_add(%arg0: tensor<2x2xf32>, %arg1: tensor<2x2xf32>) -> tensor<2x2xf32> {
+  %0 = nova.add %arg0, %arg1 : tensor<2x2xf32>, tensor<2x2xf32> -> tensor<2x2xf32>
+  return %0 : tensor<2x2xf32>
 }
+
