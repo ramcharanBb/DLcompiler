@@ -15,8 +15,8 @@ def Nova_Dialect : Dialect {
     The Nova dialect provides a high-level representation for ML operations.
   }];
   let cppNamespace = "::mlir::nova";
-  let useDefaultTypePrinterParser = 0;  // Changed to 0 to avoid requiring parser methods
-  let useDefaultAttributePrinterParser = 0;  // Changed to 0 to avoid requiring parser methods
+  let useDefaultTypePrinterParser = 0;
+  let useDefaultAttributePrinterParser = 0;
 }
 
 #endif // NOVA_DIALECT
