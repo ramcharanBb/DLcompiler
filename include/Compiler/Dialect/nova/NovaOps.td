@@ -3,6 +3,8 @@
 
 include "mlir/IR/OpBase.td"
 include "NovaDialect.td"
+include "mlir/Interfaces/InferTypeOpInterface.td"
+include "mlir/Interfaces/SideEffectInterfaces.td"
 
 def Nova_ElementType : AnyTypeOf<[I1, I8, I16, I32, I64, F16, BF16, F32, F64, Complex<F32>, Complex<F64>]>;
 def Nova_Tensor : TensorOf<[Nova_ElementType]>;
