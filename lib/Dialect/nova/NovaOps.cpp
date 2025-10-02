@@ -13,7 +13,7 @@ static std::optional<SmallVector<int64_t>>
 computeBroadcastShape(ArrayRef<int64_t> lhsShape, ArrayRef<int64_t> rhsShape) {
   SmallVector<int64_t> resultShape;
   
-  // Reverse iterate (broadcast aligns from the right)
+  // broadcast aligns from the right
   int lhsIdx = lhsShape.size() - 1;
   int rhsIdx = rhsShape.size() - 1;
   
@@ -93,8 +93,7 @@ LogicalResult AddOp::inferReturnTypes(
   }
   
   // Compute broadcasted shape
-  auto broadcastedShape = computeBroadcastShape(lhsType.getShape(), 
-                                                 rhsType.getShape());
+  auto broadcastedShape = computeBroadcastShape(lhsType.getShape(), rhsType.getShape());
   
   if (!broadcastedShape) {
     if (loc) {
