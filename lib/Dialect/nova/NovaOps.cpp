@@ -66,22 +66,7 @@ LogicalResult AddOp::inferReturnTypes(
   auto lhsType = llvm::dyn_cast<TensorType>(operands[0].getType());
   auto rhsType = llvm::dyn_cast<TensorType>(operands[1].getType());
   
-  // Verify both operands are tensors
-  if (!lhsType || !rhsType) {
-    if (loc) {
-      mlir::emitError(*loc, "nova.add operands must be tensors");
-    }
-    return failure();
-  }
-  
-  // Check element types are compatible
-  if (lhsType.getElementType() != rhsType.getElementType()) {
-    if (loc) {
-      mlir::emitError(*loc, "nova.add operands must have the same element type");
-    }
-    return failure();
-  }
-  
+
   // Get element type for result
   Type elementType = lhsType.getElementType();
   
@@ -110,31 +95,3 @@ LogicalResult AddOp::inferReturnTypes(
   
   return success();
 }
-
-// Optional: Add a verify method for additional runtime checks
-// LogicalResult AddOp::verify() {
-//   auto lhsType = getLhs().getType().cast<TensorType>();
-//   auto rhsType = getRhs().getType().cast<TensorType>();
-//   auto resultType = getResult().getType().cast<TensorType>();
-  
-//   // Verify element types match
-//   if (lhsType.getElementType() != rhsType.getElementType() ||
-//       lhsType.getElementType() != resultType.getElementType()) {
-//     return emitOpError("element types must match across all operands and result");
-//   }
-  
-//   // If all types are ranked, verify the result shape is correct
-//   if (lhsType.hasRank() && rhsType.hasRank() && resultType.hasRank()) {
-//     auto expectedShape = computeBroadcastShape(lhsType.getShape(), 
-//                                                 rhsType.getShape());
-//     if (!expectedShape) {
-//       return emitOpError("operand shapes are not broadcast-compatible");
-//     }
-    
-//     if (resultType.getShape() != *expectedShape) {
-//       return emitOpError("result shape does not match expected broadcast shape");
-//     }
-//   }
-  
-//   return success();
-// }
